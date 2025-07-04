@@ -1,0 +1,269 @@
+/* ImageSearch.css */
+/* reset browser default whitespace */
+.error {
+  color: red;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/* Container for each image */
+.image-card {
+  position: relative;        /* for absolute positioning of the button */
+  overflow: hidden;
+  border-radius: 20px;
+  margin-bottom: 1rem;       /* gap between grid rows */
+  width: 100%;
+}
+
+/* The image itself */
+.image-card img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: inherit;
+}
+
+/* Download button: hidden by default */
+.image-card button {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 0;
+  width: 100%;
+  padding: 1rem 0;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+}
+
+/* Show button on hover */
+.image-card:hover button {
+  opacity: 1;
+}
+
+/* Optional: hover state for the button itself */
+.image-card button:hover {
+  background: rgba(0, 128, 0, 0.7);
+}
+
+/* Masonry-style grid using CSS columns */
+.image-grid {
+  column-count: 3;
+  column-gap: 1rem;
+  margin: 2rem 1rem 0 1rem;
+}
+
+/* Search section */
+.search {
+  background: url('/images/bg.jpg') center/cover no-repeat;
+  height: 80vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.search h2 {
+  color: white;
+  font-size: 40px;
+  text-align: center;
+}
+
+.search form {
+  background-color: white;
+  border-radius: 30px;
+  padding: 20px;
+  display: flex;
+  gap: 1rem;
+  margin: 0 1rem 0 1rem;
+}
+
+.search input {
+  border: none;
+  outline: none;
+  border-radius: 20px;
+  height: 4rem;
+  width: 30rem;
+  padding: 0 20px;
+  font-size: 1.5rem;
+}
+
+.search button {
+  outline: none;
+  border: none;
+  background-color: white;
+  height: 4rem;
+  border-radius: 20px;
+  padding: 0 2rem;
+  font-size: 1.25rem;
+}
+
+.search button:hover {
+  background-color: #ededeb;
+}
+
+/* Logo */
+.logo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+
+.logo img {
+  height: 7rem;
+  width: auto;
+}
+.load-more{
+    border: 2px solid green;
+    text-align: center;
+    outline: none;
+    background-color: rgb(3, 110, 3);
+    width: 100%;
+    color: white;
+    font-size: 30px;
+    margin-top: 2rem;
+    padding: 20px;
+}
+.load-more:hover{
+    background-color: green;
+}
+.attribution {
+  font-size: 0.75rem;
+  color: #666;
+  margin: 0.5rem 0;
+  text-align: center;
+}
+
+.attribution a {
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Responsive breakpoints */
+
+/* Mobile: up to 599px */
+
+/* Very small devices: below 400px */
+
+
+@media (max-width: 839px) {
+  .search input{
+    font-size: 15px;
+  }
+    .logo img {
+    height: 4rem;           /* smaller logo on phones */
+  }
+  .search h2 {
+    font-size: 1.5rem;
+    padding: 0 1rem;
+  }
+  .search input {
+    width: 100%;
+    font-size: 1.25rem;
+    height: 3rem;
+  }
+  .search button {
+    padding: 0 1rem;
+    font-size: 1rem;
+    height: 3rem;
+  }
+  .image-grid {
+    column-count: 1;
+    column-gap: 0.5rem;
+    margin: 0 0.5rem;
+  }
+  .load-more {
+    font-size: 1.5rem;
+    padding: 1rem;
+  }
+}
+@media (max-width: 399px) {
+  .search form{
+    gap: 0.5rem;
+  }
+  .search form{
+    padding: 10px;
+  }
+  .search h2 {
+    font-size: 18px;
+  }
+  .search input {
+    font-size: 0.80rem;
+    height: 2.5rem;
+  
+  }
+  .search button {
+    font-size: 0.9rem;
+    height: 2.5rem;
+    padding: 0 0.75rem;
+  }
+  .load-more {
+    font-size: 1.2rem;
+    padding: 0.75rem;
+  }
+}
+
+/* Tablet: 600px – 899px */
+@media (min-width: 840px) and (max-width: 1090px) {
+      .logo img {
+    height: 6rem;           /* smaller logo on phones */
+  }
+  .search h2 {
+    font-size: 2rem;
+    padding: 0 2rem;
+  }
+  .search input {
+    width: 80%;
+    font-size: 1.5rem;
+    height: 3.5rem;
+  }
+  .search button {
+    padding: 0 1.5rem;
+    font-size: 1.125rem;
+    height: 3.5rem;
+  }
+  .image-grid {
+    column-count: 2;
+    column-gap: 1rem;
+    margin: 0 1rem;
+  }
+  .load-more {
+    font-size: 2rem;
+    padding: 1.5rem;
+  }
+}
+
+/* Desktop: 900px and up */
+@media (min-width: 1215px) {
+  .search h2 {
+    font-size: 2.5rem;
+  }
+  .search input {
+    width: 30rem;
+    font-size: 1.5rem;
+    height: 4rem;
+  }
+  .search button {
+    padding: 0 2rem;
+    font-size: 1.25rem;
+    height: 4rem;
+  }
+  .image-grid {
+    column-count: 3;
+    column-gap: 1rem;
+    margin: 0 1rem;
+  }
+  .load-more {
+    font-size: 2.5rem;
+    padding: 2rem;
+  }
+}
