@@ -138,14 +138,16 @@
 }
 .attribution {
   font-size: 0.75rem;
-  color: #666;
+  color: #c3bfbf;
   margin: 0.5rem 0;
   text-align: center;
+  background: transparent;
 }
 
 .attribution a {
   text-decoration: none;
   font-weight: bold;
+  color: #c3bfbf;
 }
 
 /* Responsive breakpoints */
