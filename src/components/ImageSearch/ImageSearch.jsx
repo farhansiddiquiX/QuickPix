@@ -17,7 +17,9 @@ const ImageSearch = () => {
   const [hasMore, setHasMore] = useState(false);
 
   // pulled from env (in Vercel: UNSPLASH_KEY)
-  const API_KEY = process.env.REACT_APP_UNSPLASH_KEY || process.env.UNSPLASH_KEY;
+const API_KEY = import.meta.env.VITE_UNSPLASH_KEY;
+console.log('Unsplash Key:', import.meta.env.VITE_UNSPLASH_KEY);
+
 
   // 1. remove clear from searchImages
   const searchImages = e => {
